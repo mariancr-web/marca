@@ -1,9 +1,9 @@
-/* mariancr.css · hoja común de la marca (tokens + materiales + herramientas). Generado 2026-10-31. */
+/* mariancr.css · hoja común de la marca (tokens + materiales + herramientas). Generado 2026-10-31 · v1.2 (revisión: foco en bandas oscuras, móvil, «Sin curso», modo oscuro). */
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..600,0,0&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 
 /* ===== Tokens (de tokens.json) ===== */
 :root{--papel:#FFFFFF;--papel-alto:#F1F5F9;--tinta:#1E293B;--tinta-suave:#475569;--linea:#CBD5E1;--trama:#94A3B8;--ok:#15803D;--error:#B91C1C;--acento-general:#2563EB;--texto-general:#1D4ED8;--suave-general:#EFF6FF;--sobre-acento-general:#FFFFFF;--acento-1eso:#10B981;--texto-1eso:#047857;--suave-1eso:#ECFDF5;--sobre-acento-1eso:#1E293B;--acento-2eso:#8B5CF6;--texto-2eso:#6D28D9;--suave-2eso:#F5F3FF;--sobre-acento-2eso:#FFFFFF;--acento-4eso:#F97316;--texto-4eso:#C2410C;--suave-4eso:#FFF7ED;--sobre-acento-4eso:#1E293B;--acento-1bach:#06B6D4;--texto-1bach:#0E7490;--suave-1bach:#ECFEFF;--sobre-acento-1bach:#1E293B;--acento-2bach:#E11D48;--texto-2bach:#BE123C;--suave-2bach:#FFF1F2;--sobre-acento-2bach:#FFFFFF;--font-titulos:"Fraunces", Georgia, serif;--font-cuerpo:"Source Sans 3", "Source Sans Pro", Calibri, sans-serif;--font-marca:"Barlow", "Segoe UI", Arial, sans-serif;--font-formulas:"Fira Math", "Cambria Math", "STIX Two Math", serif;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-12:48px;--margen-exterior:38mm;--radius-0:0;--radius-1:2px;--radius-full:999px;--stroke-fino:1px;--stroke-marco:2px;--stroke-filete:4px;--trama-eso:0.9;--trama-bach:0.55;--trama-sobre-acento:0.35}
-[data-theme="oscuro"]{--papel:#0F172A;--papel-alto:#1E293B;--tinta:#F1F5F9;--tinta-suave:#94A3B8;--linea:#334155;--trama:#475569;--ok:#4ADE80;--error:#F87171;--acento-general:#60A5FA;--texto-general:#93C5FD;--suave-general:#172554;--sobre-acento-general:#0F172A;--acento-1eso:#34D399;--texto-1eso:#6EE7B7;--suave-1eso:#022C22;--sobre-acento-1eso:#0F172A;--acento-2eso:#A78BFA;--texto-2eso:#C4B5FD;--suave-2eso:#2E1065;--sobre-acento-2eso:#0F172A;--acento-4eso:#FB923C;--texto-4eso:#FDBA74;--suave-4eso:#431407;--sobre-acento-4eso:#0F172A;--acento-1bach:#22D3EE;--texto-1bach:#67E8F9;--suave-1bach:#083344;--sobre-acento-1bach:#0F172A;--acento-2bach:#FB7185;--texto-2bach:#FDA4AF;--suave-2bach:#4C0519;--sobre-acento-2bach:#0F172A}
+[data-theme="oscuro"],[data-theme="dark"]{--papel:#0F172A;--papel-alto:#1E293B;--tinta:#F1F5F9;--tinta-suave:#94A3B8;--linea:#334155;--trama:#475569;--ok:#4ADE80;--error:#F87171;--acento-general:#60A5FA;--texto-general:#93C5FD;--suave-general:#172554;--sobre-acento-general:#0F172A;--acento-1eso:#34D399;--texto-1eso:#6EE7B7;--suave-1eso:#022C22;--sobre-acento-1eso:#0F172A;--acento-2eso:#A78BFA;--texto-2eso:#C4B5FD;--suave-2eso:#2E1065;--sobre-acento-2eso:#0F172A;--acento-4eso:#FB923C;--texto-4eso:#FDBA74;--suave-4eso:#431407;--sobre-acento-4eso:#0F172A;--acento-1bach:#22D3EE;--texto-1bach:#67E8F9;--suave-1bach:#083344;--sobre-acento-1bach:#0F172A;--acento-2bach:#FB7185;--texto-2bach:#FDA4AF;--suave-2bach:#4C0519;--sobre-acento-2bach:#0F172A}
 
 
 /* mariancr · capa de componentes. Los valores viven en tokens.json; aquí solo se combinan.
@@ -131,21 +131,26 @@
 
 /* Logo según modo: los SVG llevan colores fijos; en oscuro se usa la versión en negativo. */
 .solo-oscuro { display: none !important; }
-[data-theme="oscuro"] .solo-claro { display: none !important; }
-[data-theme="oscuro"] .solo-oscuro { display: revert !important; }
+[data-theme="oscuro"] .solo-claro, [data-theme="dark"] .solo-claro { display: none !important; }
+[data-theme="oscuro"] .solo-oscuro, [data-theme="dark"] .solo-oscuro { display: revert !important; }
 
 /* Muestras de logotipo: fondos fijos porque los SVG llevan colores fijos. */
 .mcr-muestra { display: grid; place-items: center; padding: var(--space-5); }
 .mcr-muestra--blanco { background: #FFFFFF; border: 1px solid #CBD5E1; }
 .mcr-muestra--tinta { background: #1E293B; }
 
+/* Valores por defecto en :root: los componentes funcionan aunque body no lleve .mcr/.mcr-app */
+:root{--acento:var(--acento-general);--texto:var(--texto-general);--suave:var(--suave-general);--sobre-acento:var(--sobre-acento-general);
+  --banda:#1E293B;--banda-trama:rgba(255,255,255,.07);--banda-trama-2:rgba(255,255,255,.035);--borde-web:#E2E8F0;--fondo-grupo:#F8FAFC;--gris-web:#64748B}
+[data-theme="oscuro"],[data-theme="dark"]{--banda:#020617;--borde-web:#334155;--fondo-grupo:#0B1222;--gris-web:#94A3B8}
+
 /* ===== Capa HERRAMIENTAS (webs y apps de la marca) · ver guia-web-herramientas.md =====
    Uso: <body class="mcr mcr-app curso-general">. Cambia la clase curso-* del body (o de cualquier
    contenedor) al elegir grupo: todo el color se adapta. Los grupos A/B comparten curso-*. */
 
-.mcr-app{--banda:#1E293B;--banda-trama:rgba(255,255,255,.07);--banda-trama-2:rgba(255,255,255,.035);
+.mcr-app{--banda:#1E293B;--borde-web:#E2E8F0;--fondo-grupo:#F8FAFC;--gris-web:#64748B;--banda-trama:rgba(255,255,255,.07);--banda-trama-2:rgba(255,255,255,.035);
   margin:0;min-height:100vh;background:var(--papel-alto);overflow-x:hidden}
-[data-theme="oscuro"] .mcr-app,[data-theme="oscuro"].mcr-app{--banda:#020617}
+[data-theme="oscuro"] .mcr-app,[data-theme="oscuro"].mcr-app,[data-theme="dark"] .mcr-app,[data-theme="dark"].mcr-app{--banda:#020617;--borde-web:#334155;--fondo-grupo:#0B1222;--gris-web:#94A3B8}
 .mcr-app h1,.mcr-app h2,.mcr-app h3,.mcr-app .mcr-h-app{font-family:var(--font-marca);font-weight:700;letter-spacing:-.005em;margin:0;text-wrap:balance}
 .mcr-contenedor{max-width:1080px;margin:0 auto;padding:0 28px}
 
@@ -160,17 +165,20 @@
   background-size:50px 50px,50px 50px,10px 10px,10px 10px}
 
 /* Cabecera */
-.mcr-barra{display:flex;align-items:center;gap:16px;background:var(--banda);color:#fff;padding:14px 28px;border-bottom:4px solid var(--acento);transition:border-color .3s}
+.mcr-barra{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;background:var(--banda);color:#fff;padding:14px 28px;border-bottom:4px solid var(--acento);transition:border-color .2s}
 .mcr-barra__marca{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
 .mcr-barra__marca img{height:28px;width:auto}
 .mcr-barra__nombre{font-family:var(--font-marca);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#CBD5E1;padding-left:14px;border-left:1px solid rgba(255,255,255,.25)}
 .mcr-barra__usuario{margin-left:auto;display:flex;align-items:center;gap:12px;font-size:14px;color:#CBD5E1}
+.mcr-barra .mcr-btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.mcr-barra .mcr-btn:hover{border-color:#fff}
 
 /* Banda hero bajo la cabecera */
 .mcr-hero{padding-top:24px;padding-bottom:30px;color:#fff}
 .mcr-hero h1{color:#fff;font-size:clamp(28px,4vw,42px);line-height:1.1}
 .mcr-hero__fila{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:20px}
 .mcr-hero .mcr-btn--sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.mcr-hero .mcr-btn--sec:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 
 /* Pestañas de grupo (filtros) */
 .mcr-filtros{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
@@ -184,7 +192,7 @@
 /* Botones */
 .mcr-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 14px/1 var(--font-cuerpo);padding:10px 16px;border-radius:6px;
   border:1px solid var(--linea);background:var(--papel);color:var(--tinta);cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
-.mcr-btn--prim{background:var(--texto);border-color:var(--texto);color:#fff}
+.mcr-btn--prim{background:var(--texto);border-color:var(--texto);color:var(--papel)}
 .mcr-btn--prim:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px var(--acento)}
 .mcr-btn--peligro{color:var(--error);border-color:color-mix(in srgb,var(--error) 35%,transparent)}
 .mcr-btn--peq{padding:7px 12px;font-size:13px}
@@ -197,7 +205,7 @@
 /* Tarjetas (sombra suave: excepción de la guía, solo en web) */
 .mcr-lista{display:grid;gap:12px;list-style:none;margin:0;padding:0}
 .mcr-tarjeta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:var(--papel);
-  border:1px solid #E2E8F0;border-left:5px solid var(--acento);padding:18px 20px;transition:transform .15s,box-shadow .15s}
+  border:1px solid var(--borde-web);border-left:5px solid var(--acento);padding:18px 20px;transition:transform .15s,box-shadow .15s}
 .mcr-tarjeta:hover{transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(15,23,42,.45)}
 .mcr-tarjeta__titulo{font:600 18px/1.25 var(--font-marca);color:var(--tinta);text-decoration:none}
 .mcr-tarjeta__meta{font-size:13px;color:var(--tinta-suave)}
@@ -213,18 +221,18 @@
 
 /* Grupos desplegables (vista «Todas»): <details class="mcr-grupo curso-X"><summary>… */
 .mcr-grupos{display:grid;gap:10px;margin-top:28px}
-.mcr-grupo{background:var(--papel);border:1px solid #E2E8F0;border-left:5px solid var(--acento)}
+.mcr-grupo{background:var(--papel);border:1px solid var(--borde-web);border-left:5px solid var(--acento)}
 .mcr-grupo>summary{display:flex;align-items:center;gap:10px;padding:14px 18px;cursor:pointer;list-style:none;user-select:none}
 .mcr-grupo>summary::-webkit-details-marker{display:none}
-.mcr-grupo>summary:hover{background:#F8FAFC}
-.mcr-grupo[open]>summary{border-bottom:1px solid #E2E8F0}
+.mcr-grupo>summary:hover{background:var(--fondo-grupo)}
+.mcr-grupo[open]>summary{border-bottom:1px solid var(--borde-web)}
 .mcr-grupo__chip{background:var(--acento);color:var(--sobre-acento);font:700 13px/1 var(--font-marca);letter-spacing:.04em;padding:6px 10px;border-radius:4px}
 .mcr-grupo__nombre{font:600 16px var(--font-marca);color:var(--tinta)}
-.mcr-grupo__n{margin-left:auto;font:600 12px var(--font-marca);color:#64748B;background:#E2E8F0;border-radius:999px;padding:3px 9px}
-.mcr-grupo>summary::after{content:"›";font:700 20px/1 var(--font-marca);color:#64748B;transition:transform .2s;margin-left:6px}
+.mcr-grupo__n{margin-left:auto;font:600 12px var(--font-marca);color:var(--gris-web);background:var(--borde-web);border-radius:999px;padding:3px 9px}
+.mcr-grupo>summary::after{content:"›";font:700 20px/1 var(--font-marca);color:var(--gris-web);transition:transform .2s;margin-left:6px}
 .mcr-grupo[open]>summary::after{transform:rotate(90deg)}
-.mcr-grupo>.mcr-lista{padding:12px;background:#F8FAFC}
-.mcr-grupo .mcr-tarjeta{border-left-width:1px;border-left-color:#E2E8F0}
+.mcr-grupo>.mcr-lista{padding:12px;background:var(--fondo-grupo)}
+.mcr-grupo .mcr-tarjeta{border-left-width:1px;border-left-color:var(--borde-web)}
 
 /* Estado vacío */
 .mcr-vacio{display:grid;justify-items:start;gap:12px;background:var(--papel);border:1px dashed var(--linea);padding:24px;color:var(--tinta-suave)}
@@ -238,9 +246,24 @@
 .mcr-acceso__tarjeta{width:100%;max-width:440px;background:var(--papel);border-top:5px solid var(--acento);padding:40px 36px 28px;box-shadow:0 20px 50px -20px rgba(15,23,42,.35);display:grid;gap:14px}
 .mcr-acceso__tarjeta img{height:64px;width:auto;justify-self:start;margin-bottom:8px}
 .mcr-acceso__tarjeta h1{font-size:36px;color:var(--tinta)}
-.mcr-acceso__docente{border-top:1px solid #E2E8F0;padding-top:16px;text-align:center}
+.mcr-acceso__docente{border-top:1px solid var(--borde-web);padding-top:16px;text-align:center}
 
 /* Pie */
 .mcr-pie-app{padding:28px 0;text-align:center;font:600 12px/1 var(--font-marca);letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave)}
+
+/* «Sin curso»: gris neutro */
+.curso-sin{--acento:#94A3B8;--texto:var(--tinta-suave);--suave:var(--papel-alto);--sobre-acento:#1E293B}
+.mcr-filtro.curso-sin{--pc:#94A3B8}
+
+/* Foco visible también sobre las bandas oscuras */
+.mcr-barra :focus-visible,.mcr-trama-banda :focus-visible,.mcr-acceso::before :focus-visible{outline-color:#fff}
+
+/* Móvil */
+@media (max-width:600px){
+  .mcr-contenedor{padding-left:16px;padding-right:16px}
+  .mcr-barra{padding:12px 16px}
+  .mcr-barra__nombre{display:none}
+  .mcr-acceso__tarjeta{padding:32px 22px 24px}
+}
 
 @media (prefers-reduced-motion:reduce){.mcr-app *{transition:none!important;animation:none!important}}
