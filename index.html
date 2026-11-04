@@ -1,17 +1,301 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="mariancr.css"><link rel="icon" href="logo/simbolo/mcr_general.svg" type="image/svg+xml"><title>mariancr · hoja común</title></head>
-<body class="mcr mcr-app curso-2bach">
-<header class="mcr-barra"><a class="mcr-barra__marca" href="#"><img src="logo/horizontal/mcr_horizontal_negativo.svg" alt="mariancr"><span class="mcr-barra__nombre">Clase en directo</span></a><div class="mcr-barra__usuario">Ma Ángeles Chávez <button class="mcr-btn mcr-btn--peq" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)">Salir</button></div></header>
-<section class="mcr-trama-banda"><div class="mcr-contenedor mcr-hero">
-<nav class="mcr-filtros"><button class="mcr-filtro curso-general" aria-pressed="false">Todas</button><button class="mcr-filtro curso-1eso" aria-pressed="false">1.º ESO</button><button class="mcr-filtro curso-2eso" aria-pressed="false">2.º ESO A</button><button class="mcr-filtro curso-4eso" aria-pressed="false">4.º ESO A</button><button class="mcr-filtro curso-1bach" aria-pressed="false">1.º Bach</button><button class="mcr-filtro curso-2bach" aria-pressed="true">2.º Bach</button></nav>
-<div class="mcr-hero__fila"><h1>Lecciones de 2.º Bach</h1><div><a class="mcr-btn mcr-btn--sec">Banco de preguntas</a> <button class="mcr-btn mcr-btn--prim">Nueva lección</button></div></div></div></section>
-<main class="mcr-contenedor" style="padding-top:24px;padding-bottom:30px">
-<ul class="mcr-lista"><li class="mcr-tarjeta"><div><a class="mcr-tarjeta__titulo">Química del carbono</a><div class="mcr-tarjeta__meta">279 diapositivas y 22 actividades</div></div><div class="mcr-tarjeta__acc"><a class="mcr-btn mcr-btn--peq">Editar</a><button class="mcr-btn mcr-btn--peq mcr-btn--prim">Empezar clase</button><button class="mcr-btn mcr-btn--peq mcr-btn--peligro">Eliminar</button></div></li></ul>
-<h2 class="mcr-seccion">Clases dadas</h2>
-<ul class="mcr-lista"><li class="mcr-tarjeta mcr-tarjeta--vivo"><div><span class="mcr-tarjeta__titulo">Química del carbono</span><div class="mcr-tarjeta__meta">31 oct, 21:27 · RD5EN2 · <span class="mcr-vivo">en curso</span></div></div><div class="mcr-tarjeta__acc"><a class="mcr-btn mcr-btn--peq mcr-btn--prim">Volver al directo</a></div></li>
-<li class="mcr-tarjeta mcr-tarjeta--fin"><div><span class="mcr-tarjeta__titulo">Química del carbono</span><div class="mcr-tarjeta__meta">30 oct, 10:15 · 7Y2NUX</div></div><a class="mcr-btn mcr-btn--peq">Informe</a></li></ul>
-<h2 class="mcr-seccion">Vista «Todas»</h2>
-<div class="mcr-grupos" style="margin-top:0"><details class="mcr-grupo curso-1eso" open><summary><span class="mcr-grupo__chip">1.º ESO</span><span class="mcr-grupo__nombre">Biología y Geología</span><span class="mcr-grupo__n">1</span></summary><ul class="mcr-lista"><li class="mcr-tarjeta"><span class="mcr-tarjeta__titulo">La célula</span><button class="mcr-btn mcr-btn--peq mcr-btn--prim">Empezar clase</button></li></ul></details>
-<details class="mcr-grupo curso-4eso"><summary><span class="mcr-grupo__chip">4.º ESO A</span><span class="mcr-grupo__nombre">Física y Química</span><span class="mcr-grupo__n">2</span></summary></details>
-<details class="mcr-grupo curso-1bach"><summary><span class="mcr-grupo__chip">1.º Bach</span><span class="mcr-grupo__nombre">Física y Química</span><span class="mcr-grupo__n">1</span></summary></details></div>
-<div class="mcr-vacio" style="margin-top:20px">No hay lecciones en 2.º ESO B.<button class="mcr-btn mcr-btn--prim">Crear la primera lección</button></div>
-</main><footer class="mcr-pie-app">mariancr · Clase en directo</footer></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mariancr · Identidad de marca</title>
+<meta name="description" content="Manual de identidad visual de mariancr: logotipo, color por curso, tipografía, tramas y aplicaciones.">
+<link rel="stylesheet" href="mariancr.css">
+<link rel="icon" href="logo/simbolo/mcr_general.svg" type="image/svg+xml">
+<style>
+  body{background:var(--papel)}
+  .ancho{max-width:1120px;margin:0 auto;padding:0 28px}
+  /* Navegación */
+  .nav{position:sticky;top:0;z-index:5;background:var(--banda);border-bottom:4px solid var(--acento)}
+  .nav .ancho{display:flex;align-items:center;gap:24px;height:64px}
+  .nav img{height:26px;display:block}
+  .nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+  .nav a{display:block;padding:8px 10px;color:#CBD5E1;text-decoration:none;font:600 12px/1 var(--font-marca);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-radius:4px}
+  .nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+  /* Portada */
+  .portada{color:#fff;padding:96px 0 88px;position:relative;overflow:hidden}
+  .portada .ancho{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .portada .etq{font:600 12px/1 var(--font-marca);letter-spacing:.18em;text-transform:uppercase;color:#94A3B8}
+  .portada h1{font-family:var(--font-titulos);font-weight:600;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0;font-size:clamp(44px,7vw,84px);line-height:.98;margin:18px 0 22px;letter-spacing:-.01em}
+  .portada h1 em{font-style:normal;color:var(--acento)}
+  .portada p{font-size:19px;line-height:1.55;color:#CBD5E1;max-width:34em;margin:0}
+  .portada .logo-grande{justify-self:center;width:min(100%,360px)}
+  .franja-cursos{display:grid;grid-template-columns:repeat(6,1fr);height:10px}
+  .franja-cursos span{background:var(--acento)}
+  /* Secciones */
+  section.cap{padding:88px 0;border-bottom:1px solid var(--borde-web);background:var(--papel)}
+  section.cap:nth-of-type(even){background:var(--papel-alto)}
+  .cab{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:40px}
+  .num{font:700 64px/1 var(--font-marca);color:var(--acento);letter-spacing:-.02em}
+  .cab h2{font-family:var(--font-titulos);font-weight:600;font-variation-settings:"opsz" 96,"SOFT" 0,"WONK" 0;font-size:clamp(32px,4.5vw,48px);line-height:1.05;margin:0 0 12px;color:var(--tinta)}
+  .cab p{font-size:18px;line-height:1.6;color:var(--tinta-suave);margin:0;max-width:44em}
+  .mcr-app .cap h3{font:700 13px/1 var(--font-marca);letter-spacing:.14em;text-transform:uppercase;color:var(--texto);margin:40px 0 16px}
+  .txt{font-size:16px;line-height:1.65;color:var(--tinta);max-width:46em}
+  .txt p{margin:0 0 12px}
+  .rej{display:grid;gap:16px}
+  .r2{grid-template-columns:repeat(2,1fr)}.r5{grid-template-columns:repeat(5,1fr)}.r3{grid-template-columns:repeat(3,1fr)}.r4{grid-template-columns:repeat(4,1fr)}.r6{grid-template-columns:repeat(6,1fr)}
+  .panel{background:var(--papel);border:1px solid var(--borde-web);padding:28px;display:grid;place-items:center;gap:14px;min-height:180px}
+  .panel.osc{background:#1E293B;border-color:#1E293B}
+  .panel.acento{background:var(--acento);border-color:var(--acento)}
+  .panel img{max-width:100%;height:auto}
+  .pie{font:600 11px/1.4 var(--font-marca);letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-suave);text-align:center}
+  .osc .pie,.acento .pie{color:rgba(255,255,255,.75)}
+  /* Logo: área de respeto, no hacer */
+  .respeto{position:relative;padding:34px;outline:1.5px dashed var(--texto);outline-offset:0;background:repeating-linear-gradient(45deg,var(--suave) 0 6px,transparent 6px 12px)}
+  .respeto img{display:block;height:110px;background:var(--papel)}
+  .nohacer figure{margin:0;background:var(--papel);border:1px solid var(--borde-web);padding:22px 12px 14px;display:grid;justify-items:center;gap:12px}
+  .nohacer .zona{height:84px;display:grid;place-items:center}
+  .nohacer img{height:64px}
+  .nohacer figcaption{font-size:14px;color:var(--error);font-weight:600;text-align:center}
+  .nohacer figcaption::before{content:"✗ "}
+  /* Color */
+  .muestra{border:1px solid var(--borde-web);background:var(--papel);overflow:hidden}
+  .muestra .a{height:120px;background:var(--acento);position:relative}
+  .muestra .a.mcr-trama::before{background:#fff;opacity:.35}
+  .muestra .t{height:28px;background:var(--texto)}.muestra .s{height:28px;background:var(--suave)}
+  .muestra div.i{padding:14px 16px;font-size:13px;line-height:1.5;color:var(--tinta-suave)}
+  .muestra strong{display:block;font:700 16px/1.3 var(--font-marca);color:var(--tinta);margin-bottom:4px}
+  .base .a{height:90px}
+  code{font-family:ui-monospace,Menlo,monospace;font-size:.88em}
+  /* Tipografía */
+  .tipo{background:var(--papel);border:1px solid var(--borde-web);padding:28px;display:grid;gap:10px}
+  .tipo .gr{font-size:72px;line-height:1;color:var(--tinta)}
+  .tipo .nm{font:700 18px var(--font-marca);color:var(--tinta)}
+  .tipo .us{font-size:14px;color:var(--tinta-suave);line-height:1.5}
+  /* Tramas */
+  .trama-m{height:150px;background:var(--papel);border:1px solid var(--borde-web)}
+  .trama-m.mcr-trama::before{opacity:.9}
+  /* Aplicaciones */
+  .app-portada{max-width:300px;margin:0 auto;box-shadow:0 18px 40px -22px rgba(15,23,42,.45)}
+  .app-portada .mcr-portada__inf{background:var(--acento)}
+  .app-portada .mcr-portada__inf.mcr-trama::before{background:#fff;opacity:.35}
+  .diapo{aspect-ratio:16/9;background:var(--papel);border:1px solid var(--borde-web);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;box-shadow:0 18px 40px -22px rgba(15,23,42,.45)}
+  .diapo .izq{padding:8% 7%;display:flex;flex-direction:column;justify-content:center;gap:10px}
+  .diapo .izq img{width:46%}
+  .diapo .izq b{font-family:var(--font-titulos);font-weight:600;font-variation-settings:"SOFT" 0,"WONK" 0;font-size:clamp(18px,2.3vw,28px);line-height:1.1;color:var(--tinta)}
+  .diapo .der{background:var(--acento);display:flex;align-items:flex-end;justify-content:flex-end;padding:4%;font:700 clamp(60px,9vw,120px)/.8 var(--font-marca);color:#fff}
+  .diapo .der.mcr-trama::before{background:#fff;opacity:.35}
+  .mini-web{border:1px solid var(--borde-web);overflow:hidden;background:var(--papel-alto);box-shadow:0 18px 40px -22px rgba(15,23,42,.45)}
+  .mini-web .mcr-barra{padding:10px 16px}.mini-web .mcr-barra img{height:20px}
+  .mini-web .mcr-trama-banda{padding:18px 16px;color:#fff;font:700 22px var(--font-marca)}
+  .mini-web .cuerpo{padding:14px 16px;display:grid;gap:10px}
+  .mini-web .mcr-tarjeta{padding:12px 14px}
+  /* Recursos */
+  .desc a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;background:var(--papel);border:1px solid var(--borde-web);border-left:5px solid var(--acento);color:var(--tinta);text-decoration:none;font:600 16px var(--font-marca);transition:transform .15s,box-shadow .15s}
+  .desc a:hover{transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(15,23,42,.45)}
+  .desc a span{font:400 13px var(--font-cuerpo);color:var(--tinta-suave)}
+  pre{background:#1E293B;color:#E2E8F0;padding:18px 20px;overflow-x:auto;font-size:13px;line-height:1.6;margin:0}
+  .chip-c{display:inline-block;padding:3px 9px;border-radius:4px;background:var(--acento);color:var(--sobre-acento);font:700 12px/1.4 var(--font-marca)}
+  .regla{display:grid;grid-template-columns:28px 1fr;gap:4px 12px;align-items:start;margin:0 0 14px}
+  .regla b{font:700 20px/1.2 var(--font-marca);color:var(--acento)}
+  footer.fin{background:var(--banda);color:#94A3B8;padding:40px 0;font:600 12px/1.6 var(--font-marca);letter-spacing:.12em;text-transform:uppercase}
+  footer.fin .ancho{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  footer.fin img{height:24px}
+  @media (max-width:900px){.r4,.r5,.r6{grid-template-columns:repeat(3,1fr)}.r3{grid-template-columns:repeat(2,1fr)}.portada .ancho{grid-template-columns:1fr}.portada .logo-grande{width:200px;justify-self:start}}
+  @media (max-width:600px){.ancho{padding:0 16px}.r2,.r3,.r4{grid-template-columns:1fr}.r5,.r6{grid-template-columns:repeat(2,1fr)}.cab{grid-template-columns:1fr;gap:6px}.num{font-size:44px}section.cap{padding:56px 0}.portada{padding:56px 0}.nav ul{display:none}}
+</style>
+</head>
+<body class="mcr mcr-app curso-general">
+
+<nav class="nav"><div class="ancho">
+  <a href="#inicio" aria-label="Inicio"><img src="logo/horizontal/mcr_horizontal_negativo.svg" alt="mariancr"></a>
+  <ul>
+    <li><a href="#marca">Marca</a></li><li><a href="#logotipo">Logotipo</a></li><li><a href="#color">Color</a></li>
+    <li><a href="#tipografia">Tipografía</a></li><li><a href="#tramas">Tramas</a></li><li><a href="#aplicaciones">Aplicaciones</a></li>
+    <li><a href="#tono">Tono</a></li><li><a href="#recursos">Recursos</a></li>
+  </ul>
+</div></nav>
+
+<header id="inicio" class="portada mcr-trama-banda">
+  <div class="ancho">
+    <div>
+      <div class="etq">Manual de identidad visual · v3</div>
+      <h1>Ciencias con <em>marca</em> propia.</h1>
+      <p>mariancr es la identidad de los materiales de Ciencias de 1.º ESO a 2.º Bach: apuntes, cuadernos, presentaciones y webs. Un sistema sobrio y moderno en el que el color identifica el curso y el número, el tema.</p>
+    </div>
+    <img class="logo-grande" src="logo/vertical/mcr_vertical_negativo.svg" alt="Logotipo vertical de mariancr">
+  </div>
+</header>
+<div class="franja-cursos" aria-hidden="true"><span class="curso-general"></span><span class="curso-1eso"></span><span class="curso-2eso"></span><span class="curso-4eso"></span><span class="curso-1bach"></span><span class="curso-2bach"></span></div>
+
+<main>
+<!-- 01 MARCA -->
+<section class="cap" id="marca"><div class="ancho">
+  <div class="cab"><div class="num">01</div><div><h2>La marca</h2><p>Aspecto de libro de texto maquetado por un profesional: fondo blanco, mucho aire, tipografía cuidada y un único color por curso.</p></div></div>
+  <div class="rej r2">
+    <div class="txt">
+      <div class="regla"><b>1</b><span><strong>El color identifica el curso.</strong> Cada curso tiene un acento fijo; «General» se usa para lo común.</span></div>
+      <div class="regla"><b>2</b><span><strong>El tema va por número y posición,</strong> nunca por color: distintivo «Tema n», número grande en portada y pestaña lateral escalonada.</span></div>
+      <div class="regla"><b>3</b><span><strong>La trama refuerza el curso</strong> y lo mantiene reconocible en fotocopia en blanco y negro.</span></div>
+      <div class="regla"><b>4</b><span><strong>Marca propia, no del colegio.</strong> El nombre del centro puede aparecer como texto; su logo, solo en exámenes y, si se quiere, en la portada de las presentaciones.</span></div>
+    </div>
+    <div class="panel"><img src="logo/horizontal/mcr_horizontal_general.svg" alt="Logotipo horizontal" style="width:min(100%,380px)"><div class="pie">Logotipo principal · General</div></div>
+  </div>
+</div></section>
+
+<!-- 02 LOGOTIPO -->
+<section class="cap" id="logotipo"><div class="ancho">
+  <div class="cab"><div class="num">02</div><div><h2>Logotipo</h2><p>Una casilla de elemento químico. La M es el símbolo y «CR» sale por la esquina superior derecha, rompiendo el marco. Las letras están dibujadas: no se reescriben con una fuente.</p></div></div>
+
+  <h3>Versiones</h3>
+  <div class="rej r3">
+    <div class="panel"><img src="logo/simbolo/mcr_general.svg" alt="" style="height:110px"><div class="pie">Símbolo · favicon, pies, diapositivas</div></div>
+    <div class="panel"><img src="logo/horizontal/mcr_horizontal_general.svg" alt="" style="width:90%"><div class="pie">Horizontal · cubiertas, web, cabecera</div></div>
+    <div class="panel"><img src="logo/vertical/mcr_vertical_general.svg" alt="" style="height:130px"><div class="pie">Vertical · portadas estrechas, perfil</div></div>
+  </div>
+
+  <h3>Un logotipo por curso</h3>
+  <div class="rej r6" id="logos-curso"></div>
+
+  <h3>Sobre fondos</h3>
+  <div class="rej r4">
+    <div class="panel"><img src="logo/horizontal/mcr_horizontal_general.svg" alt="" style="width:85%"><div class="pie">Papel</div></div>
+    <div class="panel osc"><img src="logo/horizontal/mcr_horizontal_negativo.svg" alt="" style="width:85%"><div class="pie">Negativo sobre tinta</div></div>
+    <div class="panel acento curso-2bach"><img src="logo/horizontal/mcr_horizontal_negativo.svg" alt="" style="width:85%"><div class="pie">Negativo sobre color</div></div>
+    <div class="panel"><img src="logo/horizontal/mcr_horizontal_mono.svg" alt="" style="width:85%"><div class="pie">Mono · fotocopia</div></div>
+  </div>
+
+  <div class="rej r2" style="margin-top:8px">
+    <div>
+      <h3>Área de respeto y tamaño mínimo</h3>
+      <div class="rej r2" style="align-items:center">
+        <div style="display:grid;place-items:center"><div class="respeto"><img src="logo/simbolo/mcr_general.svg" alt=""></div></div>
+        <div class="txt"><p>Alrededor del logo, como mínimo, la altura de la <strong>CR</strong>.</p><p>Tamaño mínimo: símbolo <strong>16 px / 6 mm</strong>; horizontal <strong>28 px / 10 mm</strong> de alto.</p></div>
+      </div>
+    </div>
+    <div>
+      <h3>Construcción</h3>
+      <div class="txt"><p>Marco redondeado, abierto en la esquina superior derecha, con un grosor del 5 % del ancho. M ancha con V central profunda. CR estrecha, de estilo DIN, que sobresale del marco con un hueco igual al trazo.</p><p>M y marco siempre en <strong>tinta</strong>; CR en el acento del curso.</p></div>
+    </div>
+  </div>
+
+  <h3>Qué no hacer</h3>
+  <div class="rej r4 nohacer">
+    <figure><div class="zona"><img src="logo/simbolo/mcr_general.svg" alt="" style="transform:scaleX(1.5)"></div><figcaption>Deformar</figcaption></figure>
+    <figure><div class="zona"><img src="logo/simbolo/mcr_general.svg" alt="" style="transform:rotate(-18deg)"></div><figcaption>Girar</figcaption></figure>
+    <figure><div class="zona"><img src="logo/simbolo/mcr_general.svg" alt="" style="filter:drop-shadow(4px 6px 3px rgba(0,0,0,.45))"></div><figcaption>Añadir sombras o degradados</figcaption></figure>
+    <figure><div class="zona"><img src="logo/simbolo/mcr_2bach.svg" alt="" style="filter:hue-rotate(140deg) saturate(1.6)"></div><figcaption>Usar colores fuera de la paleta</figcaption></figure>
+  </div>
+</div></section>
+
+<!-- 03 COLOR -->
+<section class="cap" id="color"><div class="ancho">
+  <div class="cab"><div class="num">03</div><div><h2>Color</h2><p>Cada curso tiene tres tonos: <strong>acento</strong> para superficies grandes (logo, portada, pestaña, franjas), <strong>texto</strong> para letras de color y <strong>suave</strong> para rellenos.</p></div></div>
+  <div class="rej r6" id="colores"></div>
+  <h3>Base</h3>
+  <div class="rej r6 base">
+    <div class="muestra"><div class="a" style="background:#1E293B"></div><div class="i"><strong>Tinta</strong>#1E293B · texto, M, filetes</div></div>
+    <div class="muestra"><div class="a" style="background:#475569"></div><div class="i"><strong>Tinta suave</strong>#475569 · texto secundario</div></div>
+    <div class="muestra"><div class="a" style="background:#CBD5E1"></div><div class="i"><strong>Línea</strong>#CBD5E1 · filetes y bordes</div></div>
+    <div class="muestra"><div class="a" style="background:#F1F5F9"></div><div class="i"><strong>Papel alto</strong>#F1F5F9 · fondos neutros</div></div>
+    <div class="muestra"><div class="a" style="background:#15803D"></div><div class="i"><strong>Acierto ✓</strong>#15803D · siempre con icono</div></div>
+    <div class="muestra"><div class="a" style="background:#B91C1C"></div><div class="i"><strong>Error ✗</strong>#B91C1C · siempre con icono</div></div>
+  </div>
+  <div class="txt" style="margin-top:24px"><p>El acento no se usa en texto pequeño: para letras, el tono <em>texto</em>. No pongas General y 1.º Bach uno junto al otro, porque se parecen.</p></div>
+</div></section>
+
+<!-- 04 TIPOGRAFÍA -->
+<section class="cap" id="tipografia"><div class="ancho">
+  <div class="cab"><div class="num">04</div><div><h2>Tipografía</h2><p>Tres familias gratuitas (OFL). Fraunces da el tono editorial de los materiales; Barlow, el de las herramientas y las etiquetas.</p></div></div>
+  <div class="rej r3">
+    <div class="tipo"><div class="gr" style="font-family:var(--font-titulos);font-weight:600;font-variation-settings:'SOFT' 0,'WONK' 0">Aa</div><div class="nm">Fraunces</div><div class="us">Títulos de materiales: portadas, h1–h3. Peso 500–600, SOFT y WONK a 0.</div></div>
+    <div class="tipo"><div class="gr" style="font-family:var(--font-cuerpo)">Aa</div><div class="nm">Source Sans 3</div><div class="us">Texto de lectura. ESO 16/26 a la izquierda; Bach 14/21 justificado.</div></div>
+    <div class="tipo"><div class="gr" style="font-family:var(--font-marca);font-weight:700">Aa</div><div class="nm">Barlow</div><div class="us">Marca, etiquetas en mayúsculas espaciadas, números y títulos de las webs.</div></div>
+  </div>
+  <h3>Jerarquía</h3>
+  <div class="tipo" style="gap:14px">
+    <div class="mcr-distintivo" style="justify-self:start">Tema 3</div>
+    <div style="font-family:var(--font-titulos);font-weight:600;font-variation-settings:'opsz' 72,'SOFT' 0,'WONK' 0;font-size:40px;line-height:1.05">Reacciones químicas</div>
+    <div style="font-family:var(--font-titulos);font-weight:600;font-variation-settings:'opsz' 36,'SOFT' 0,'WONK' 0;font-size:22px;color:var(--texto)">3.1 Ajuste de ecuaciones</div>
+    <p style="margin:0;font-size:16px;line-height:26px;max-width:40em">En una reacción química la masa se conserva: el número de átomos de cada elemento es el mismo en reactivos y productos. Por eso 2 H₂ + O₂ → 2 H₂O.</p>
+    <div class="mcr-etiqueta" style="color:var(--tinta-suave)">Figura 3.2 · Modelo de bolas</div>
+  </div>
+</div></section>
+
+<!-- 05 TRAMAS -->
+<section class="cap" id="tramas"><div class="ancho">
+  <div class="cab"><div class="num">05</div><div><h2>Tramas</h2><p>Cada curso tiene su papel de cuaderno. La trama acompaña al color y mantiene la identificación cuando se imprime en blanco y negro.</p></div></div>
+  <div class="rej r5" id="tramas-m"></div>
+</div></section>
+
+<!-- 06 APLICACIONES -->
+<section class="cap" id="aplicaciones"><div class="ancho">
+  <div class="cab"><div class="num">06</div><div><h2>Aplicaciones</h2><p>El mismo sistema en papel, en el proyector y en la pantalla.</p></div></div>
+  <div class="rej r3" style="align-items:start">
+    <div>
+      <div class="mcr-portada app-portada curso-4eso">
+        <div class="mcr-portada__sup"><img class="mcr-portada__logo" src="logo/horizontal/mcr_horizontal_4eso.svg" alt=""><div class="mcr-etiqueta" style="color:var(--texto)">4.º ESO · Física y Química</div><div class="mcr-distintivo" style="align-self:flex-start">Tema 2</div><div class="mcr-titulo mcr-portada__titulo" style="font-size:30px">Fuerzas y movimiento</div></div>
+        <div class="mcr-portada__inf mcr-trama"><div class="mcr-portada__num">2</div></div>
+      </div>
+      <h3 style="text-align:center">Portada de tema</h3>
+    </div>
+    <div>
+      <div class="diapo curso-2bach"><div class="izq"><img src="logo/horizontal/mcr_horizontal_2bach.svg" alt=""><span class="mcr-etiqueta" style="color:var(--texto)">2.º Bach · Química</span><b>Química del carbono</b></div><div class="der mcr-trama">1</div></div>
+      <h3 style="text-align:center">Presentación 16:9</h3>
+      <div class="mcr-caja mcr-caja--definicion curso-2bach" style="margin-top:8px"><div class="mcr-caja__etiqueta mcr-etiqueta">Definición</div><div><span class="mcr-caja__termino">Isómeros:</span> compuestos con la misma fórmula molecular y distinta estructura.</div></div>
+      <h3 style="text-align:center">Caja en los apuntes</h3>
+    </div>
+    <div>
+      <div class="mini-web curso-1eso">
+        <div class="mcr-barra"><img src="logo/horizontal/mcr_horizontal_negativo.svg" alt=""><span class="mcr-barra__nombre">Clase en directo</span></div>
+        <div class="mcr-trama-banda">La célula</div>
+        <div class="cuerpo"><div class="mcr-tarjeta"><span class="mcr-tarjeta__titulo" style="font-size:15px">Partes de la célula</span><span class="mcr-vivo">en curso</span></div><div class="mcr-tarjeta mcr-tarjeta--fin"><span class="mcr-tarjeta__titulo" style="font-size:15px">Seres vivos</span></div></div>
+      </div>
+      <h3 style="text-align:center">Webs y herramientas</h3>
+    </div>
+  </div>
+</div></section>
+
+<!-- 07 TONO -->
+<section class="cap" id="tono"><div class="ancho">
+  <div class="cab"><div class="num">07</div><div><h2>Tono y ortotipografía</h2><p>Claro, cercano y riguroso. Se tutea al alumnado y se escribe como en un buen libro de texto.</p></div></div>
+  <div class="rej r2 txt">
+    <div>
+      <div class="regla"><b>✓</b><span>«Calcula», «Observa», «Recuerda»: imperativo y tuteo.</span></div>
+      <div class="regla"><b>✓</b><span>Cursos con punto: 1.º ESO, 2.º Bach.</span></div>
+      <div class="regla"><b>✓</b><span>Títulos en minúscula normal; mayúsculas solo en etiquetas.</span></div>
+      <div class="regla"><b>✓</b><span>Sin emojis. Iconos de contorno, trazo fino, en tinta o en el color de texto.</span></div>
+    </div>
+    <div>
+      <div class="regla"><b>✓</b><span>Unidades SI con espacio: 400 Pa · 9,8 m/s² · 25 °C.</span></div>
+      <div class="regla"><b>✓</b><span>Coma decimal y notación científica con ×: 6,022 × 10²³ mol⁻¹.</span></div>
+      <div class="regla"><b>✓</b><span>Magnitudes en cursiva (<em>p</em>, <em>V</em>, <em>T</em>); unidades y fórmulas en redonda (Pa, H₂O).</span></div>
+      <div class="regla"><b>✓</b><span>Archivos: <code>2bach-quim-t01-apuntes.pdf</code></span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 08 RECURSOS -->
+<section class="cap" id="recursos"><div class="ancho">
+  <div class="cab"><div class="num">08</div><div><h2>Recursos</h2><p>Todo lo necesario para aplicar la marca. Los logotipos son SVG vectoriales con fondo transparente.</p></div></div>
+  <div class="rej r3 desc">
+    <a href="logo/horizontal/mcr_horizontal_general.svg" download>Logotipo horizontal <span>SVG</span></a>
+    <a href="logo/vertical/mcr_vertical_general.svg" download>Logotipo vertical <span>SVG</span></a>
+    <a href="logo/simbolo/mcr_general.svg" download>Símbolo <span>SVG</span></a>
+    <a href="logo/horizontal/mcr_horizontal_negativo.svg" download>Horizontal en negativo <span>SVG</span></a>
+    <a href="logo/horizontal/mcr_horizontal_mono.svg" download>Horizontal mono <span>SVG</span></a>
+    <a href="mariancr.css">Hoja de estilos web <span>CSS</span></a>
+  </div>
+  <h3>Usar la marca en una web</h3>
+  <pre>&lt;link rel="stylesheet" href="https://mariancr-marca.vercel.app/mariancr.css"&gt;
+&lt;link rel="icon" href="https://mariancr-marca.vercel.app/logo/simbolo/mcr_general.svg"&gt;
+&lt;body class="mcr mcr-app curso-general"&gt;   &lt;!-- curso-1eso | 2eso | 4eso | 1bach | 2bach --&gt;</pre>
+  <div class="txt" style="margin-top:16px"><p>Al cambiar la hoja, todas las webs que la enlazan se actualizan solas: <a href="https://mariancr-directo.vercel.app/">Clase en directo</a> y <a href="https://mariancr-test.vercel.app/">Exámenes tipo test</a>.</p></div>
+</div></section>
+</main>
+
+<footer class="fin"><div class="ancho"><img src="logo/horizontal/mcr_horizontal_negativo.svg" alt="mariancr"><span>Manual de identidad · Ciencias 1.º ESO – 2.º Bach</span></div></footer>
+
+<script>
+  const C=[['general','General','—','#2563EB','#1D4ED8','#EFF6FF'],['1eso','1.º ESO · BioGeo','Cuadrícula','#10B981','#047857','#ECFDF5'],['2eso','2.º ESO · FyQ','Punteado','#8B5CF6','#6D28D9','#F5F3FF'],['4eso','4.º ESO · FyQ','Isométrico','#F97316','#C2410C','#FFF7ED'],['1bach','1.º Bach · FyQ','Pautado','#06B6D4','#0E7490','#ECFEFF'],['2bach','2.º Bach · Química','Milimetrado','#E11D48','#BE123C','#FFF1F2']];
+  document.getElementById('colores').innerHTML=C.map(([id,n,t,a,x,s])=>`<div class="muestra curso-${id}"><div class="a ${id!=='general'?'mcr-trama':''}"></div><div class="t"></div><div class="s"></div><div class="i"><strong>${n}</strong>Acento ${a}<br>Texto ${x}<br>Suave ${s}</div></div>`).join('');
+  document.getElementById('logos-curso').innerHTML=C.map(([id,n])=>`<div class="panel curso-${id}" style="min-height:150px"><img src="logo/simbolo/mcr_${id}.svg" alt="" style="height:72px"><span class="chip-c">${n.split(' · ')[0]}</span></div>`).join('');
+  document.getElementById('tramas-m').innerHTML=C.slice(1).map(([id,n,t])=>`<div><div class="trama-m mcr-trama curso-${id}"></div><div class="pie" style="margin-top:10px">${t} · ${n.split(' · ')[0]}</div></div>`).join('');
+</script>
+</body>
+</html>
